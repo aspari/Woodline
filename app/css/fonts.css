@@ -1,0 +1,19 @@
+@font-face {
+  font-family: Exo2Bold;
+  src: local("Exo2Bold"), url(/fonts/Exo2Bold/Exo2Bold.ttf); }
+
+@font-face {
+  font-family: OpenSansBold;
+  src: local("OpenSansBold"), url(/fonts/OpenSansBold/OpenSansBold.ttf); }
+
+@font-face {
+  font-family: OpenSansLight;
+  src: local("OpenSansLight"), url(/fonts/OpenSansLight/OpenSansLight.ttf); }
+
+@font-face {
+  font-family: OpenSansRegular;
+  src: local("OpenSansRegular"), url(/fonts/OpenSansRegular/OpenSansRegular.ttf); }
+
+@font-face {
+  font-family: OpenSansSemiBold;
+  src: local("OpenSansSemiBold"), url(/fonts/OpenSansSemiBold/OpenSansSemiBold.ttf); }

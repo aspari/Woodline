@@ -1,0 +1,868 @@
+$color: #B8312F
+$main_color: #515151
+$dark: #D1D5D8
+$light: #EFEFEF
+
+=mt($time)
+  transition: all $time ease
+
+=mt-out($time)
+  transition: all $time ease-out
+
+a
+  color: $color
+
+h1
+  color: $main_color
+  font-size: 40px
+  font-family: OpenSansBold, sans-serif
+  margin: 0
+  line-height: 30px
+  text-transform: uppercase
+
+h2
+  color: $main_color
+  font-size: 20px
+  font-family: OpenSansSemiBold, sans-serif
+  margin: 0
+
+h3
+  font-size: 18px
+  font-family: Exo2Bold, sans-serif
+
+body
+  background-color: $light
+  font-size: 14px
+
+section
+  position: relative
+  //margin-top: 60px
+  //margin-bottom: 30px
+.color_element
+  color: $color
+
+.main_head
+  min-height: 620px
+  //background-color: $main_color
+  //background-image: url('img/main.jpg')
+
+.head_line
+  display: flex
+  align-items: center
+  align-content: stretch
+
+.logo
+  flex-grow: 1
+  font-size: 45px
+  font-family: Exo2Bold, sans-serif
+  a
+    color: $light
+  span
+    color: $color
+
+.main_menu
+  display: flex
+  align-items: center
+  justify-content: space-around
+  flex-grow: 2
+.menu_item
+  width: 20%
+  flex-grow: 1
+  text-align: center
+  a
+    padding: 5px 0
+    color: $dark
+    font-size: 12px
+    text-transform: uppercase
+    font-family: OpenSansBold, sans-serif
+    +mt(0.25s)
+    &:hover
+      color: $light
+  &.active
+    a
+      border-bottom: 2px solid $color
+      border-top: 2px solid $color
+
+.phone
+  flex-grow: 1
+  color: $light
+  font-size: 20px
+  font-family: Exo2Bold, sans-serif
+  display: inline-block
+  text-align: right
+  .fa
+    color: $color
+    font-size: 35px
+    margin-right: 10px
+    vertical-align: middle
+
+.main_head_content
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  margin-top: 150px
+  text-align: center
+  h1
+    margin-top: 30px
+    color: $light
+    margin: 35px 0
+  h2
+    color: $dark
+
+  p
+    margin: auto
+    color: $dark
+    width: 65%
+    line-height: 20px
+    span
+      font-weight: 600
+
+.button
+  margin: auto
+  margin-top: 100px
+  padding: 10px
+  width: 200px
+  display: inline-block
+  background-color: $color
+  border-radius: 20px
+  text-transform: uppercase
+  font-weight: 600
+  letter-spacing: 3px
+  font-size: 12px
+  box-shadow: 0 2px 0 #892523
+  a
+    color: $light
+  +mt (.15s)
+  &:hover
+    background-color: #cf3230
+  &:active
+    background-color: #892523
+    transform: translateY(2px)
+
+//mouse-wheal
+.mouse_wheel_wrapper
+  text-align: center
+  position: relative
+  top: -70px
+.mouse-icon
+  border: 2px solid $light
+  border-radius: 16px
+  height: 40px
+  width: 24px
+  display: inline-block
+  z-index: 10
+  opacity: 0.7
+  .wheel
+    animation-name: drop
+    animation-duration: 1s
+    animation-timing-function: linear
+    animation-delay: 0s
+    animation-iteration-count: infinite
+    animation-play-state: running
+    position: relative
+    border-radius: 10px
+    background: $color
+    width: 2px
+    height: 6px
+    top: 4px
+    margin-left: auto
+    margin-right: auto
+
+@-webkit-keyframes drop
+  0%
+    top: 5px
+    opacity: 0
+
+  30%
+    top: 10px
+    opacity: 1
+
+  100%
+    top: 25px
+    opacity: 0
+
+@keyframes drop
+  0%
+    top: 5px
+    opacity: 0
+
+  30%
+    top: 10px
+    opacity: 1
+
+  100%
+    top: 25px
+    opacity: 0
+
+.services
+  position: relative
+  display: flex
+  flex-flow: row wrap
+  box-shadow: 0px 5px 20px 0px $dark
+.service_item
+  display: block
+  width: 25%
+  border-right: 1px solid #e4e3e3
+  border-left: 1px solid #e4e3e3
+  height: 275px
+  text-align: center
+  padding: 50px 0px
+  overflow: hidden
+  +mt-out(0.2s)
+  img
+    width: 25%
+  h3
+    margin-top: 35px
+    position: relative
+    padding-bottom: 15px
+    &::before
+      content: ''
+      position: absolute
+      bottom: 0
+      height: 2px
+      width: 12%
+      left: 50%
+      margin-left: -6%
+      background-color: $color
+      +mt(.3s)
+  p
+    margin: 10px 15px
+    max-height: 100px
+    overflow: hidden
+  a
+    margin: auto
+    margin-top: 10px
+    padding: 10px
+    display: none
+    background-color: $main_color
+    border-radius: 20px
+    font-size: 11px
+    box-shadow: 0 2px 0 #373737
+    color: $light
+    &:hover
+      background-color: #616161
+
+  &:hover
+    padding: 25px 0px
+    margin-top: -65px
+    color: $light
+    height: 340px
+    background-color: $color
+    border: none
+    p
+      color: $light
+    h3
+      &::before
+        background-color: $light
+        width: 30%
+        margin-left: -15%
+    a
+      display: inline-block
+.title_wrap
+  text-align: center
+  margin: 110px 0 60px
+  img
+    height: 8px
+  h3
+    font-family: OpenSansRegular, sans-serif
+.about
+  a
+    font-weight: 600
+
+.about_img_wrap
+  position: relative
+  width: 100%
+  height: 360px
+  .fa-angle-up
+    font-size: 20px
+    color: $main_color
+    position: absolute
+    margin-top: -20px
+    right: 0
+    text-align: center
+    top: 50%
+    z-index: 2
+    cursor: pointer
+  .fa-angle-down
+    font-size: 20px
+    color: $main_color
+    position: absolute
+    margin-top: 10px
+    right: 0
+    text-align: center
+    top: 50%
+    cursor: pointer
+
+.about_img
+  position: absolute
+  width: 85%
+  top: 0
+  left: 0
+  z-index: 1
+  img
+    height: 330px
+
+.about_img_shadow
+  position: absolute
+  background-color: #fbfbfb
+  box-shadow: 0px 5px 20px 0px $dark
+  display: block
+  bottom: 0
+  right: 5%
+  height: 330px
+  width: 85%
+  border-radius: 3px
+
+.clients_wrap
+  display: flex
+  flex-flow: row wrap
+  align-items: center
+  justify-content: center
+  background-color: $main_color
+  margin-top: 130px
+
+.clients_production
+  width: 50%
+  text-align: center
+  padding: 35px 10px
+  background: url(img/production.jpg) center no-repeat $main_color
+  h1
+    margin-top: 100px
+    font-size: 30px
+    color: $light
+    text-transform: none
+  p
+    color: $light
+  .button
+    margin-top: 15px
+    margin-bottom: 100px
+    text-transform: none
+    width: 150px
+  &:hover
+    background: none
+    background-color: $color
+    .button
+      background-color: $main_color
+      &:hover
+        background-color: #616161
+
+.clients_furniture
+  width: 50%
+  text-align: center
+  display: block
+  position: relative
+  padding: 35px 10px
+  background: url(img/furniture.jpg) center no-repeat $main_color
+  h1
+    margin-top: 100px
+    font-size: 30px
+    color: $light
+    text-transform: none
+  p
+    color: $light
+  .button
+    margin-top: 15px
+    margin-bottom: 100px
+    text-transform: none
+    width: 150px
+  &:hover
+    background: none
+    background-color: $color
+    .button
+      background-color: $main_color
+      &:hover
+        background-color: #616161
+
+.feat_item_wrap
+  text-align: center
+  height: 300px
+  p
+    display: none
+    margin: 0 5px 15px
+  a
+    font-weight: 600
+    display: none
+  .feat_img_p
+    background: url(img/feat_prod.png) no-repeat
+    position: relative
+    display: block
+    height: 110px
+    width: 110px
+    left: 50%
+    margin-left: -45px
+    .feat_img_wrap_p
+      //display: inline-block
+      transition-duration: .6s
+      transition-property: transform
+      transform-origin: 45px 45px
+      img
+        display: block
+        position: absolute
+        left: 0
+        top: 0
+        &.mouse_in
+          display: none
+  &:hover
+    p
+      display: block
+    a
+      display: block
+    .feat_img_p
+      .feat_img_wrap_p
+        transform: rotate(90deg)
+        transform-origin: 45px 45px
+        img
+          &.mouse_out
+            display: none
+          &.mouse_in
+            display: block
+  .feat_img_t
+    background: url(img/feat_time.png) no-repeat
+    position: relative
+    display: block
+    height: 110px
+    width: 110px
+    left: 50%
+    margin-left: -45px
+    .feat_img_wrap_t
+      //display: inline-block
+      transition-duration: .6s
+      transition-property: transform
+      transform-origin: 45px 45px
+      img
+        display: block
+        position: absolute
+        left: 0
+        top: 0
+        &.mouse_in
+          display: none
+  &:hover
+    p
+      display: block
+    a
+      display: block
+    .feat_img_t
+      .feat_img_wrap_t
+        transform: rotate(90deg)
+        transform-origin: 45px 45px
+        img
+          &.mouse_out
+            display: none
+          &.mouse_in
+            display: block
+  .feat_img_r_m
+    background: url(img/feat_qual.png) right top no-repeat
+    position: relative
+    display: block
+    height: 110px
+    width: 110px
+    left: 50%
+    margin-left: -65px
+    margin-top: 40px
+    .feat_img_wrap_r_m
+      //display: inline-block
+      transition-duration: .6s
+      transition-property: transform
+      transform-origin: 65px 45px
+      img
+        display: block
+        position: absolute
+        left: 0
+        top: 0
+        transform: rotate(180deg)
+        &.mouse_in
+          display: none
+  &:hover
+    p
+      display: block
+    a
+      display: block
+    .feat_img_r_m
+      .feat_img_wrap_r_m
+        transform: rotate(-90deg)
+        transform-origin: 65px 45px
+        img
+          &.mouse_out
+            display: none
+          &.mouse_in
+            display: block
+  .feat_img_r_e
+    background: url(img/feat_exp.png) right top no-repeat
+    position: relative
+    display: block
+    height: 110px
+    width: 110px
+    left: 50%
+    margin-left: -65px
+    .feat_img_wrap_r_e
+      //display: inline-block
+      transition-duration: .6s
+      transition-property: transform
+      transform-origin: 65px 45px
+      img
+        display: block
+        position: absolute
+        left: 0
+        top: 0
+        transform: rotate(180deg)
+        &.mouse_in
+          display: none
+  &:hover
+    p
+      display: block
+    a
+      display: block
+    .feat_img_r_e
+      .feat_img_wrap_r_e
+        transform: rotate(-90deg)
+        transform-origin: 65px 45px
+        img
+          &.mouse_out
+            display: none
+          &.mouse_in
+            display: block
+
+.brands_wrap
+  display: flex
+  flex-flow: row wrap
+  justify-content: flex-start
+  background-color: $color
+  min-height: 400px
+
+.left_side
+  display: flex
+  flex-direction: column
+  justify-content: center
+  width: 35%
+  text-align: center
+  p
+    color: $light
+    font-size: 17px
+  h1
+    color: $light
+
+.right_side
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  width: 65%
+  padding-left: 50px
+  padding-right: 15px
+  background: url(img/brands_bg.png) left no-repeat
+
+/*** Brands Carousel ***/
+.clearout
+  height: 20px
+  clear: both
+
+.nbs-flexisel-container
+  position: relative
+  max-width: 100%
+
+.nbs-flexisel-ul
+  position: relative
+  width: 99999px
+  margin: 0px
+  padding: 0px
+  list-style-type: none
+  text-align: center
+
+.nbs-flexisel-inner
+  position: relative
+  overflow: hidden
+  float: left
+  width: 100%
+  padding-left: 35px
+  background: rgba(255, 255, 255, 0.1)
+  border-radius: 7px
+
+.nbs-flexisel-item
+  float: left
+  margin: 0px
+  padding: 0px 15px
+  cursor: pointer
+  position: relative
+  line-height: 0px
+  img
+    max-width: 100%
+    cursor: pointer
+    position: relative
+    margin-top: 10px
+    margin-bottom: 10px
+
+/*** Navigation ***/
+
+.nbs-flexisel-nav-left, .nbs-flexisel-nav-right
+  padding: 5px 10px
+  border-radius: 15px
+  position: absolute
+  cursor: pointer
+  z-index: 4
+  top: 40%
+  background: rgba(0, 0, 0, 0.5)
+  color: #fff
+
+.nbs-flexisel-nav-left
+  left: 10px
+  &:before
+    content: "<"
+  &.disabled
+    opacity: 0.4
+
+.nbs-flexisel-nav-right
+  right: 5px
+  &:before
+    content: ">"
+  &.disabled
+    opacity: 0.4
+/*** Brands Carousel ***/
+
+.testimonials
+  width: 100%
+  position: relative
+  .fa-angle-up
+    font-size: 20px
+    color: $main_color
+    position: absolute
+    margin-top: -20px
+    right: 0
+    text-align: center
+    top: 50%
+    z-index: 2
+    cursor: pointer
+  .fa-angle-down
+    font-size: 20px
+    color: $main_color
+    position: absolute
+    margin-top: 10px
+    right: 0
+    text-align: center
+    top: 50%
+    cursor: pointer
+.fa-circle
+  color: $color
+  font-size: 12px
+  position: absolute
+  right: 16px
+  text-align: center
+  top: 50%
+
+.testimonial_img
+  position: absolute
+  width: 100%
+  top: 0
+  left: 0
+  z-index: 1
+  img
+    height: 330px
+
+.testimonial_text
+  position: absolute
+  box-shadow: 0px 5px 20px 0px $dark
+  display: block
+  bottom: 0
+  right: 5%
+  height: 330px
+  width: 75%
+  border-radius: 3px
+  text-align: center
+  padding-left: 10%
+  padding-top: 50px
+  background-color: #fbfbfb
+  span
+    margin: 0 10px
+    color: $color
+  h3
+    margin: 10px 0
+    font-family: OpenSansSemibold, sans-serif
+    color: $main_color
+  h4
+    margin: 10px 0
+    font-size: 13px
+    font-family: OpenSansRegular, sans-serif
+    color: $main_color
+  p
+    margin: 25px 0
+  .fa
+    color: $dark
+    font-size: 60px
+
+.portfolio
+	ul
+		margin-bottom: 12px
+		text-align: center
+	li
+		list-style-type: none
+		padding: 0
+		margin: 0
+		text-align: center
+	li
+		display: inline-block
+		margin: 0 15px
+		font-size: em(14px)
+		cursor: pointer
+		font-family: "OpenSansSemiBold", sans-serif
+		font-weight: normal
+		color: $main_color
+		line-height: 2
+		&.active
+			color: $color
+			border-bottom: 1px solid $color
+
+.portfolio_cont
+	color: $light
+
+.portfolio_item
+	display: none
+	padding: 0
+	img
+		width: 100%
+	.port_item_cont
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		background-color: rgba(45,45,45,.8)
+		text-align: center
+		padding-top: 0
+		opacity: 0
+		+mt (0.5s)
+	&:hover .port_item_cont
+		opacity: 1
+		padding-top: 10%
+	h3
+		font-family: "Exo2Bold", sans-serif
+		font-weight: normal
+		letter-spacing: 2px
+		margin-bottom: 0
+	a
+		background-color: transparent
+		border: 1px $color solid
+		color: $color
+		display: inline-block
+		padding: 2px 15px
+  p
+    white-space: nowrap
+    overflow: hidden
+    text-overflow: ellipsis
+    padding: 2px 20px
+    color: $light
+.port_descr
+	position: relative
+	background-color: $light
+	max-width: 800px
+	margin: auto
+	img
+		position: relative
+		width: 100%
+		margin-top: 20px
+	p,
+	h3
+		padding: 20px
+		padding-bottom: 0
+	h3
+		text-align: center
+		text-transform: uppercase
+		font-weight: 400
+		margin-top: 20px
+		margin-bottom: 10px
+		padding-top: 25px
+
+.portfolio_full
+  margin: 25px auto
+  text-align: center
+  width: 50%
+  a
+    color: $color
+    font-size: 25px
+    display: block
+    border: 3px solid $color
+
+.feedback_wrap
+  display: flex
+  margin-top: 110px
+
+.feedback
+  width: 50%
+  background-color: $main_color
+  padding: 0 65px 110px
+  text-align: center
+  color: $light
+  .title_wrap
+    color: $light
+    h1
+      color: $light
+
+.feedback_img
+  width: 50%
+  background: url('img/feedback.png') no-repeat center
+
+.text-danger
+  color: $color
+  padding: 0
+  margin: 0
+
+.input_wrap
+  display: flex
+  flex-flow: column
+  align-items: center
+  justify-content: space-between
+  min-height: 210px
+
+.textarea_wrap
+  display: flex
+  flex-flow: column
+  align-items: stretch
+  min-height: 210px
+
+.person
+
+
+.feedback_form
+  input,
+  textarea
+    width: 100%
+    border: 2px solid $light
+    border-radius: 5px
+    background-color: $main_color
+    margin-bottom: 25px
+    padding: 8px 55px 8px 25px
+    display: block
+    outline: none
+  input[type="text"]
+    background: url('img/person.png') no-repeat right 25px center
+  input[type="email"]
+    background: url('img/email.png') no-repeat right 25px center
+  input[type="tel"]
+    background: url('img/phone.png') no-repeat right 25px center
+  textarea
+    resize: none
+    min-height: 180px
+    height: 100%
+    background: url('img/message.png') no-repeat right 25px bottom 8px
+
+  input:focus,
+  textarea:focus
+    border: 2px solid $color
+  button
+    background-color: $color
+    border: none
+    border-radius: 20px
+    padding: 10px 50px
+    text-transform: uppercase
+    font-weight: 600
+    font-size: 13px
+    display: block
+    margin: 0 auto
+    +mt (.15s)
+    &:hover
+      background-color: #cf3230
+    &:active
+      background-color: #892523
+      transform: translateY(2px)
+
+
+@import "media"

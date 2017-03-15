@@ -746,7 +746,8 @@ section {
 /*** Brands Carousel ***/
 .testimonials {
   width: 100%;
-  position: relative; }
+  position: relative;
+  padding-bottom: 100px; }
   .testimonials .fa-angle-up {
     font-size: 20px;
     color: #515151;
@@ -1026,6 +1027,36 @@ section {
     -webkit-transform: translateY(2px);
         -ms-transform: translateY(2px);
             transform: translateY(2px); }
+
+footer {
+  background-color: #272727; }
+
+.address {
+  background: url("img/address.jpg") no-repeat center;
+  padding: 90px 0; }
+  .address .address_wrap {
+    width: 200px;
+    margin: auto; }
+    .address .address_wrap p {
+      color: #D1D5D8;
+      font-size: 12px;
+      font-weight: 600;
+      margin: 7px 0; }
+    .address .address_wrap .fa {
+      color: #EFEFEF;
+      margin-right: 10px;
+      font-size: 15px; }
+    .address .address_wrap h4 {
+      color: #B8312F;
+      text-transform: uppercase; }
+
+.footer_sec {
+  padding: 90px 0;
+  color: #EFEFEF; }
+
+.map {
+  margin-top: 25px;
+  min-height: 275px; }
 
 /*==========  Desktop First Method  ==========*/
 /* Custom Media Queries */
